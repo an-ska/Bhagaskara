@@ -1,0 +1,106 @@
+.get_in_touch {
+    h2 {
+        text-align: center;
+        width: 190px;
+        height: 60px;
+        line-height: 60px;
+        margin: 80px auto;
+        position: relative;
+    }
+    form {
+        input {
+            width: 100%;
+            margin-bottom: 30px;
+            text-transform: capitalize;
+            padding: 18px;
+            font-size: 18px;
+            display: block;
+            @include mobile {
+                width: 90%;
+                margin: auto auto 30px auto;
+            }
+            @include tablet {
+                width: 90%;
+                margin: auto auto 30px auto;
+            }
+        }
+        textarea {
+            width: 100%;
+            height: 250px;
+            text-transform: capitalize;
+            padding: 10px;
+            font-size: 18px;
+            margin-bottom: 30px;
+            display: block;
+            @include mobile {
+                width: 90%;
+                margin: auto auto 30px auto;
+            }
+            @include tablet {
+                width: 90%;
+                margin: auto auto 30px auto;
+            }
+        }
+        ::-webkit-input-placeholder {
+            color: black;
+        }
+        ::-moz-placeholder {
+            color: black;
+        }
+        p {
+            margin-left: 50px;
+            line-height: 30px;
+            font-size: 16px;
+            @include mobile {
+                margin: 25px 15px;
+                text-align: justify;
+            }
+            @include tablet {
+                margin: 25px 15px;
+                text-align: justify;
+            }
+        }
+        .form_description {
+            margin-bottom: 30px;
+            margin-top: 20px;
+        }
+        .form_address {
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+        .form_phone {
+            font-weight: bold;
+        }
+        .button {
+            @include mobile {
+                display: block;
+                margin: auto;
+            }
+            @include tablet {
+                display: block;
+                margin: auto;
+            }
+        }
+        ul {
+            margin-top: 56px;
+            float:left;
+            width: 100%;
+            li {
+                margin-left: 50px;
+                text-decoration: none;
+                display: inline-block;
+                @include mobile {
+                    margin-left: 10px;
+                }
+                @include tablet {
+                    margin-left: 5px;
+                }
+            }
+            li img:hover {
+            -webkit-transform: scale(1.1);
+            -ms-transform: scale(1.1);
+            transform: scale(1.1);
+            }
+        }
+    }
+}

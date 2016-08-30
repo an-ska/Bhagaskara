@@ -1,0 +1,53 @@
+.four_descriptions {
+    text-align: center;
+    background-color: #ededed;
+    .four_descriptions_heading {
+        font-size: 20px;
+        margin: 26px 0;
+    }
+    .four_descriptions_text {
+        font-size: 14px;
+        line-height: 25px;
+        margin-bottom: 150px;
+        @include mobile {
+            margin: auto 15px 20px 15px;
+        }
+        @include tablet {
+            margin: auto 15px 25px 15px;
+        }
+    }
+    .square_menu {
+        margin-top: 150px;
+        background: url('./Hex-04.svg');
+        background-size: 200px;
+        background-repeat: no-repeat;
+        cursor: default;
+        @include mobile {
+            margin-top: 25px;
+            width: 160px;
+            height: 160px;
+            background-size: 160px;
+        }
+        @include tablet {
+            margin-top: 35px;
+        }
+        .fa {
+            color: #c3c6c7;
+            margin: 68px auto;
+            @include mobile {
+                margin: 48px auto;
+            }
+        }
+        &:hover {
+            background: url('./Hex-03.svg');
+            background-size: 200px;
+            background-repeat: no-repeat;
+            @include mobile {
+                background-size: 160px;
+            }
+            .fa {
+                color: purple;
+            }
+        }
+    }
+}

@@ -1,0 +1,60 @@
+.about_us {
+    h2 {
+        text-align: center;
+        width: 160px;
+        height: 60px;
+        line-height: 60px;
+        margin: 80px auto;
+        position: relative;
+    }
+    // img {
+    //     width: 100%;
+    // }
+    .screens {
+        width: 100%;
+        margin: 0 0 150px 0;
+        display: block;
+        @include tablet {
+            width: 70%;
+            margin: auto;
+        }
+        @include mobile {
+            margin: auto;
+
+        }
+    }
+    p {
+        margin-bottom: 114px;
+        margin-left: 100px;
+        line-height: 40px;
+        text-align: left;
+        @include tablet {
+            margin: 40px 15px 60px 15px;
+            text-align: justify;
+        }
+        @include mobile {
+            margin: 40px 15px 60px 15px;
+            text-align: justify;
+        }
+    }
+    .button {
+        margin-left: 100px;
+        @include tablet {
+            margin: auto auto 25px auto;
+        }
+        @include mobile {
+            margin: auto auto 20px auto;
+        }
+    }
+    // .col-6 {
+    //     @include tablet {
+    //         display: block;
+    //     }
+    // }
+}
+
+// .block {
+//     @include tablet {
+//         display: block;
+//     }
+// }

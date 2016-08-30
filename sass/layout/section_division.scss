@@ -1,0 +1,28 @@
+.division {
+    background: url('../images/division_section.jpg')center / cover no-repeat;
+    .square_menu {
+        margin: 100px auto 0 auto;
+        position: relative;
+        display: block;
+        cursor: default;
+        @include mobile {
+            width: 160px;
+            height: 160px;
+            background-size: 160px;
+        }
+        .fa {
+            position: absolute;
+            top: 65px;
+            right: 70px;
+            @include mobile {
+                top: 45px;
+                right: 50px;
+            }
+        }
+    }
+    h2 {
+        text-align: center;
+        color: white;
+        margin: 30px 0 100px 0;
+    }
+}

@@ -1,0 +1,60 @@
+.our_skills {
+    margin-bottom: 150px;
+    @include mobile {
+        margin-bottom: 50px;
+    }
+    @include tablet {
+        margin-bottom: 50px;
+    }
+    h2 {
+        text-align: center;
+        margin: 80px auto;
+        width: 160px;
+        height: 60px;
+        line-height: 60px;
+        position: relative;
+    }
+    .skillbar {
+        position: relative;
+        margin-bottom: 40px;
+        width: 100%;
+        background: #eee;
+        height: 35px;
+        border-radius: 2px;
+        @include mobile {
+            width: 85%;
+            margin: 0 auto 15px auto;
+        }
+        @include tablet {
+            width: 85%;
+            margin: 0 auto 20px auto;
+        }
+    }
+    .skillbar_title {
+        position: absolute;
+        left: 0px;
+        font-size: 13px;
+        text-transform: uppercase;
+        color:white;
+        background:purple;
+        line-height: 35px;
+        border-radius: 2px;
+        padding: 0 10px;
+    }
+    .skillbar_bar {
+  	   height: 35px;
+       width: 0;
+       background: purple;
+       border-radius: 4px;
+   }
+   .skillbar_percent {
+  	  position: absolute;
+  	  right: 10px;
+  	  top: 0;
+  	  font-size: 11px;
+  	  height: 35px;
+  	  line-height: 35px;
+  	  color: #444;
+      opacity: 0.6;
+    }
+}

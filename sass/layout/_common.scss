@@ -1,0 +1,114 @@
+@font-face {
+    font-family: 'latoregular';
+    src: url('../fonts/lato-regular-webfont.woff2') format('woff2'),
+         url('../fonts/lato-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'latoregular', sans-serif;
+}
+.container {
+    width:100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+header, nav, section, footer {
+    width: 100%;
+}
+.row::before, .row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.text_color {
+    color: purple;
+}
+h1 {
+    font-size: 75px;
+    @include mobile {
+        font-size: 40px;
+    }
+}
+h2 {
+    font-size: 25px;
+    @include mobile {
+        font-size: 20px;
+    }
+}
+h3 {
+    font-size: 18px;
+    @include mobile {
+        font-size: 16px;
+    }
+}
+.square_menu {
+    background: url('./Hex-01.svg');
+    background-repeat: no-repeat;
+    background-size: 200px;
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    color: white;
+    .svg_inside {
+        .fa {
+            margin: 50px auto 15px auto;
+        }
+    }
+}
+.button {
+    padding: 22px;
+    background-color: purple;
+    width: 200px;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    a {
+        color: white;
+        text-decoration: none;
+        color: white;
+    }
+    &:hover {
+      background: #600977;
+    }
+    &:active {
+      box-shadow: 5px 5px 5px #888888;
+    }
+}
+.square_decor_headings_l, .square_decor_headings_r  {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+}
+.square_decor_headings_l {
+    bottom: 0;
+    left: 0;
+    border-left: 2px solid purple;
+    border-bottom: 2px solid purple;
+}
+.square_decor_headings_r {
+    top:0;
+    right:0;
+    border-right: 2px solid black;
+    border-top: 2px solid black;
+    display: block;
+}
+$colCount: 12;
+@for $i from 1 through $colCount {
+    .col-#{$i} {
+    width: ($i / $colCount) * 100%;
+    }
+}
+[class*='col-'] {
+    float: left;
+    min-height: 1px;
+}
+@media all and (max-width:1200px) and (orientation: portrait) {
+    [class*='col-'] {
+        width:100%;
+    }
+}
