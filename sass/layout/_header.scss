@@ -57,7 +57,7 @@ header {
         width: 70px;
         height: 70px;
         background: url('./Hex-01.svg');
-        background-repeat:no-repeat;
+        background-repeat: no-repeat;
         background-size: 70px;
         display: inline-block;
         margin-bottom: 40px;
@@ -73,7 +73,7 @@ header {
         }
         &:hover {
             background: url('./Hex-02.svg');
-            background-repeat:no-repeat;
+            background-repeat :no-repeat;
             background-size: 70px;
 
         }

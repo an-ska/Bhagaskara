@@ -4,9 +4,7 @@ $(document).ready(function() {
 //progress bars
     $('.our-skills').on('mouseenter', function() {
         $('.skillbar').each(function() {
-        	$(this).find('.skillbar-bar').animate({
-        		width:$(this).attr('data-percent')
-        	}, 2000);
+        	$(this).find('.skillbar-bar').animate({width: $(this).attr('data-percent')}, 2000);
         });
     });
 
@@ -22,7 +20,7 @@ $(document).ready(function() {
     galleryHeadings.on('click', function() {
         galleryHeadings.removeClass('portfolio-filter-click');
         $(this).addClass('portfolio-filter-click');
-    })
+    });
 
 // gallery
     $('.portfolio-filter').on('click', function() {
@@ -39,7 +37,7 @@ $(document).ready(function() {
 
 //slow scrolling - main, top navigation
     var navTop = $('#home').find('a');
-    navTop.on('click', function(){
+    navTop.on('click', function() {
         var hrefValue = $(this).attr('href');
         var hrefValueOffset = $(hrefValue).offset();
         $('body, html').animate({scrollTop: hrefValueOffset.top}, 'slow');
@@ -59,31 +57,67 @@ $(document).ready(function() {
     $('body, html').animate({scrollTop: 0}, 'slow');
     });
 
+// form validation
+    var formButton = $('.get-in-touch').find('.button');
+    var mailValid = /^[A-Z0-9._%+-]+@([A-Z0-9-]+\.)+[A-Z]{2,4}$/i;
+
+    formButton.on('click', function(){
+        var name = $('.name').val();
+        var email = $('.email').val();
+        var textarea = $('.get-in-touch').find('textarea').attr('placeholder', 'your message').val();
+        function emptyField() {
+            if (name == '' || textarea === '' || email === '') {
+                return true;
+            } else {
+                return false;
+            }
+        };
+        function emailCheck() {
+            if (!(mailValid.test(email)) && !(email === '')) {
+                return true;
+            } else {
+                return false;
+            }
+        };
+        var emptyResult = emptyField(name, email, textarea);
+        var emailCheckResult = emailCheck(email);
+
+        if (emptyResult) {
+            alert('All fields are required');
+        };
+        if (emailCheckResult) {
+            alert('Please correct your email');
+        };
+
+        if (emptyResult === false && emailCheckResult === false) {
+            alert('Message sent. Thank you!')
+        }
+    });
 });
 
 // slider
 document.addEventListener('DOMContentLoaded', function() {
     var buttonNext = document.querySelector('.team-arrow-right');
-        var buttonPrev = document.querySelector('.team-arrow-left');
-        var list = document.querySelectorAll('.slider li');
-        var picIndex = 0;
+    var buttonPrev = document.querySelector('.team-arrow-left');
+    var list = document.querySelectorAll('.slider li');
+    var picIndex = 0;
+    list[picIndex].className = 'visible';
+
+    buttonNext.addEventListener('click', function(event) {
+        list[picIndex].classList.remove('visible');
+        picIndex++;
+        if (picIndex > list.length - 1) {
+            picIndex = list.length - 1;
+        }
         list[picIndex].className = 'visible';
 
-        buttonNext.addEventListener('click', function(event) {
-            list[picIndex].classList.remove('visible');
-            picIndex++;
-            if (picIndex > list.length - 1) {
-                picIndex = list.length - 1;
-            }
-            list[picIndex].className = 'visible';
-
-        });
-        buttonPrev.addEventListener('click', function(event) {
-            list[picIndex].classList.remove('visible');
-            picIndex--;
-            if (picIndex < 0) {
-                picIndex = 0;
-            }
-            list[picIndex].className = 'visible';
-        });
+    });
+    buttonPrev.addEventListener('click', function(event) {
+        list[picIndex].classList.remove('visible');
+        picIndex--;
+        if (picIndex < 0) {
+            picIndex = 0;
+        }
+        list[picIndex].className = 'visible';
+    });
 });

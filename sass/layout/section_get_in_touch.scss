@@ -11,10 +11,15 @@
         input {
             width: 100%;
             margin-bottom: 30px;
-            text-transform: capitalize;
+            // text-transform: capitalize;
             padding: 18px;
             font-size: 18px;
             display: block;
+            border: 1px solid #808080;
+            border-radius: 3px;
+            &:focus {
+                background-color: #eee;
+            }
             @include mobile {
                 width: 90%;
                 margin: auto auto 30px auto;
@@ -32,6 +37,11 @@
             font-size: 18px;
             margin-bottom: 30px;
             display: block;
+            border: 1px solid #808080;
+            border-radius: 3px;
+            &:focus {
+                background-color: #eee;
+            }
             @include mobile {
                 width: 90%;
                 margin: auto auto 30px auto;
@@ -72,6 +82,7 @@
             font-weight: bold;
         }
         .button {
+            color: #FFFFFF;
             @include mobile {
                 display: block;
                 margin: auto;
@@ -83,7 +94,7 @@
         }
         ul {
             margin-top: 56px;
-            float:left;
+            float: left;
             width: 100%;
             li {
                 margin-left: 50px;
