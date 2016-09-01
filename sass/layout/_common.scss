@@ -20,12 +20,12 @@ header, nav, section, footer {
     width: 100%;
 }
 .row::before, .row::after {
-    content: "";
+    content: '';
     display: table;
     clear: both;
 }
-.text_color {
-    color: purple;
+.text-color {
+    color: #800080;
 }
 h1 {
     font-size: 75px;
@@ -45,15 +45,15 @@ h3 {
         font-size: 16px;
     }
 }
-.square_menu {
+.square-menu {
     background: url('./Hex-01.svg');
     background-repeat: no-repeat;
     background-size: 200px;
     width: 200px;
     height: 200px;
     display: inline-block;
-    color: white;
-    .svg_inside {
+    color: #ffffff;
+    .svg-inside {
         .fa {
             margin: 50px auto 15px auto;
         }
@@ -61,16 +61,16 @@ h3 {
 }
 .button {
     padding: 22px;
-    background-color: purple;
+    background-color: #800080;
     width: 200px;
     line-height: 20px;
     text-align: center;
     border-radius: 5px;
     cursor: pointer;
     a {
-        color: white;
+        color: #ffffff;
         text-decoration: none;
-        color: white;
+        color: #ffffff;
     }
     &:hover {
       background: #600977;
@@ -79,22 +79,22 @@ h3 {
       box-shadow: 5px 5px 5px #888888;
     }
 }
-.square_decor_headings_l, .square_decor_headings_r  {
+.square-decor-headings-l, .square-decor-headings-r {
     position: absolute;
     width: 20px;
     height: 20px;
 }
-.square_decor_headings_l {
+.square-decor-headings-l {
     bottom: 0;
     left: 0;
-    border-left: 2px solid purple;
-    border-bottom: 2px solid purple;
+    border-left: 2px solid #800080;
+    border-bottom: 2px solid #800080;
 }
-.square_decor_headings_r {
+.square-decor-headings-r {
     top:0;
     right:0;
-    border-right: 2px solid black;
-    border-top: 2px solid black;
+    border-right: 2px solid #000000;
+    border-top: 2px solid #000000;
     display: block;
 }
 $colCount: 12;

@@ -1,4 +1,4 @@
-.our_skills {
+.our-skills {
     margin-bottom: 150px;
     @include mobile {
         margin-bottom: 50px;
@@ -30,24 +30,24 @@
             margin: 0 auto 20px auto;
         }
     }
-    .skillbar_title {
+    .skillbar-title {
         position: absolute;
         left: 0px;
         font-size: 13px;
         text-transform: uppercase;
-        color:white;
-        background:purple;
+        color:#ffffff;
+        background:#800080;
         line-height: 35px;
         border-radius: 2px;
         padding: 0 10px;
     }
-    .skillbar_bar {
+    .skillbar-bar {
   	   height: 35px;
        width: 0;
-       background: purple;
+       background: #800080;
        border-radius: 4px;
    }
-   .skillbar_percent {
+   .skillbar-percent {
   	  position: absolute;
   	  right: 10px;
   	  top: 0;

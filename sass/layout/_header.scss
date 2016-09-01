@@ -1,6 +1,6 @@
 header {
-    background: url("../images/header_background.jpg")center / cover no-repeat;
-    color: white;
+    background: url('../images/header_background.jpg')center / cover no-repeat;
+    color: #ffffff;
     text-align: center;
     h1{
         margin: 26px 0;
@@ -11,7 +11,7 @@ header {
     h3 {
         margin: 10px 0 40px 0;
     }
-    .square_menu_top {
+    .square-menu-top {
         margin-top: 20px;
         margin-bottom: 10px;
         @include mobile {
@@ -24,7 +24,7 @@ header {
         }
     }
     a {
-        .square_menu {
+        .square-menu {
             @include mobile {
                 margin-bottom: 20px;
                 width: 160px;
@@ -42,7 +42,7 @@ header {
         }
         &:hover {
             font-weight: bold;
-            .square_menu:hover {
+            .square-menu:hover {
                 background: url('./Hex-02.svg');
                 background-size: 200px;
                 @include mobile {
@@ -53,12 +53,12 @@ header {
             }
         }
     }
-    .square_menu_arrow {
+    .square-menu-arrow {
         width: 70px;
         height: 70px;
         background: url('./Hex-01.svg');
         background-repeat:no-repeat;
-        background-size: 70px 70px;
+        background-size: 70px;
         display: inline-block;
         margin-bottom: 40px;
         @include mobile {
@@ -69,12 +69,12 @@ header {
         }
         .fa-angle-down {
             margin: 10px auto;
-            color: white;
+            color: #ffffff;
         }
         &:hover {
             background: url('./Hex-02.svg');
             background-repeat:no-repeat;
-            background-size: 70px 70px;
+            background-size: 70px;
 
         }
     }

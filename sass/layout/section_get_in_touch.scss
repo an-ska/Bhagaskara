@@ -1,4 +1,4 @@
-.get_in_touch {
+.get-in-touch {
     h2 {
         text-align: center;
         width: 190px;
@@ -42,10 +42,10 @@
             }
         }
         ::-webkit-input-placeholder {
-            color: black;
+            color: #000000;
         }
         ::-moz-placeholder {
-            color: black;
+            color: #000000;
         }
         p {
             margin-left: 50px;
@@ -60,15 +60,15 @@
                 text-align: justify;
             }
         }
-        .form_description {
+        .form-description {
             margin-bottom: 30px;
             margin-top: 20px;
         }
-        .form_address {
+        .form-address {
             margin-bottom: 30px;
             font-weight: bold;
         }
-        .form_phone {
+        .form-phone {
             font-weight: bold;
         }
         .button {
@@ -95,12 +95,13 @@
                 @include tablet {
                     margin-left: 5px;
                 }
+                & img:hover {
+                -webkit-transform: scale(1.1);
+                -ms-transform: scale(1.1);
+                transform: scale(1.1);
+                }
             }
-            li img:hover {
-            -webkit-transform: scale(1.1);
-            -ms-transform: scale(1.1);
-            transform: scale(1.1);
-            }
+
         }
     }
 }

@@ -1,6 +1,6 @@
 nav {
     margin: 50px 0;
-    .logo_title {
+    .logo-title {
         float: left;
         text-transform: capitalize;
         font-size: 30px;
@@ -13,14 +13,17 @@ nav {
             a {
                 margin: 0 0 0 30px;
                 text-decoration: none;
-                color: black;
+                color: #000000;
                 text-transform: uppercase;
                 font-size: 15px;
                 line-height: 30px;
                 font-weight: bold;
                 &:hover {
-                    color: purple;
+                    color: #800080;
                 }
+            }
+            .navBottomLinksClick {
+                color: #808080;
             }
         }
     }
