@@ -27,11 +27,11 @@
         text-align: left;
         @include tablet {
             margin: 40px 15px 60px 15px;
-            text-align: justify;
+            text-align: center;
         }
         @include mobile {
             margin: 40px 15px 60px 15px;
-            text-align: justify;
+            text-align: center;
         }
     }
     .button {

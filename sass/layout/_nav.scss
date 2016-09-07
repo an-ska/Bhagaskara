@@ -1,15 +1,18 @@
 nav {
-    margin: 50px 0;
+    width: 100%;
+    margin: 40px 0;
+    .row {
+        background: #ffffff;
+    }
     .logo-title {
         float: left;
         text-transform: capitalize;
         font-size: 30px;
-        line-height: 30px;
     }
     ul {
-        float: right;
         li {
             display: inline-block;
+            float: right;
             a {
                 margin: 0 0 0 30px;
                 text-decoration: none;
@@ -24,6 +27,28 @@ nav {
             }
             .navBottomLinksClick {
                 color: #808080;
+            }
+        }
+    }
+    .sticky {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 40px;
+        line-height: 40px;
+        box-shadow: 0 2px 3px rgba(0,0,0,.4);
+        font-size: 13px;
+        .logo-title {
+            margin-left: 50px;
+            font-size: 20px;
+        }
+        ul {
+            margin-right: 50px;
+            li {
+                a {
+                font-size: 13px;
+                }
             }
         }
     }

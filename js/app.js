@@ -1,18 +1,30 @@
 $(document).ready(function() {
 
-
-//progress bars
-    $('.our-skills').on('mouseenter', function() {
-        $('.skillbar').each(function() {
-        	$(this).find('.skillbar-bar').animate({width: $(this).attr('data-percent')}, 2000);
-        });
-    });
-
-// bottom navigation
+// bottom navigation - on click change
     var navBottomLinks = $('#nav-bottom li').find('a');
     navBottomLinks.on('click', function() {
         navBottomLinks.removeClass('navBottomLinksClick');
         $(this).addClass('navBottomLinksClick')
+    });
+
+// sticky menu
+    var navBottomRow = $('nav .row');
+    var navBottomRowPosition = $(navBottomRow).offset().top;
+
+    $(window).on('scroll', function() {
+        var documentScroll = $(document).scrollTop();
+        if (documentScroll > navBottomRowPosition) {
+            navBottomRow.addClass('sticky');
+        } else {
+            navBottomRow.removeClass('sticky');
+        };
+    });
+
+//progress bars - animation
+    $('.our-skills').on('mouseenter', function() {
+        $('.skillbar').each(function() {
+        	$(this).find('.skillbar-bar').animate({width: $(this).attr('data-percent')}, 2000);
+        });
     });
 
 //filters in gallery
@@ -42,7 +54,6 @@ $(document).ready(function() {
         var hrefValueOffset = $(hrefValue).offset();
         $('body, html').animate({scrollTop: hrefValueOffset.top}, 'slow');
     });
-
 
 // slow scrolling - bottom navigation
     var navBottom = $('#nav-bottom').find('a');
@@ -83,7 +94,7 @@ $(document).ready(function() {
         var emailCheckResult = emailCheck(email);
 
         if (emptyResult) {
-            alert('All fields are required');
+            alert('All fields are required.');
         };
         if (emailCheckResult) {
             alert('Please correct your email');
@@ -103,7 +114,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var picIndex = 0;
     list[picIndex].className = 'visible';
 
-    buttonNext.addEventListener('click', function(event) {
+    buttonNext.addEventListener('click', function() {
         list[picIndex].classList.remove('visible');
         picIndex++;
         if (picIndex > list.length - 1) {
@@ -112,7 +123,7 @@ document.addEventListener('DOMContentLoaded', function() {
         list[picIndex].className = 'visible';
 
     });
-    buttonPrev.addEventListener('click', function(event) {
+    buttonPrev.addEventListener('click', function() {
         list[picIndex].classList.remove('visible');
         picIndex--;
         if (picIndex < 0) {
