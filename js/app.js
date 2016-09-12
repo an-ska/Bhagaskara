@@ -104,10 +104,9 @@ $(document).ready(function() {
             alert('Message sent. Thank you!')
         }
     });
-});
+
 
 // slider
-document.addEventListener('DOMContentLoaded', function() {
     var buttonNext = document.querySelector('.team-arrow-right');
     var buttonPrev = document.querySelector('.team-arrow-left');
     var list = document.querySelectorAll('.slider li');
