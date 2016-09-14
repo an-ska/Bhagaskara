@@ -4,3 +4,5 @@ My first project after 7 weeks of learning coding at Coders Lab - Programming Sc
 
 Used:
 HTML, CSS, SASS, JavaScript, jQuery, RWD, Gulp
+
+#### DEMO > www.apiotrowska.pl/bhagaskara
