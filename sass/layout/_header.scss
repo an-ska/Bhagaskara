@@ -45,6 +45,7 @@ header {
             .square-menu:hover {
                 background: url('./Hex-02.svg');
                 background-size: 200px;
+                animation: swing 0.2s ease;
                 @include mobile {
                      width: 160px;
                      height: 160px;
@@ -73,9 +74,9 @@ header {
         }
         &:hover {
             background: url('./Hex-02.svg');
-            background-repeat :no-repeat;
+            background-repeat: no-repeat;
             background-size: 70px;
-
+            animation: move 1s ease;
         }
     }
 }
