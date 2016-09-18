@@ -20,14 +20,14 @@ $(document).ready(function() {
         };
     });
 
-//progress bars - animation
+// progress bars - animation
     $('.our-skills').on('mouseenter', function() {
         $('.skillbar').each(function() {
         	$(this).find('.skillbar-bar').animate({width: $(this).attr('data-percent')}, 2000);
         });
     });
 
-//filters in gallery
+// filters in gallery
     var galleryHeadings = $('.portfolio-filter');
     galleryHeadings.on('click', function() {
         galleryHeadings.removeClass('portfolio-filter-click');
@@ -52,7 +52,7 @@ $(document).ready(function() {
     navTop.on('click', function() {
         var hrefValue = $(this).attr('href');
         var hrefValueOffset = $(hrefValue).offset();
-        $('body, html').animate({scrollTop: hrefValueOffset.top}, 'slow');
+        $('body, html').animate({scrollTop: hrefValueOffset.top - 50}, 'slow');
     });
 
 // slow scrolling - bottom navigation
@@ -60,10 +60,10 @@ $(document).ready(function() {
     navBottom.on('click', function() {
         var hrefValue = $(this).attr('href');
         var hrefValueOffset = $(hrefValue).offset();
-        $('body, html').animate({scrollTop: hrefValueOffset.top}, 'slow');
+        $('body, html').animate({scrollTop: hrefValueOffset.top + 25}, 'slow');
     });
 
-//slow scrolling - bottom right arrow
+// slow scrolling - bottom right arrow
     $("a[href='#to-top']").on('click', function() {
     $('body, html').animate({scrollTop: 0}, 'slow');
     });
